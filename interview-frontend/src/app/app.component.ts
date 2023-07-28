@@ -27,12 +27,17 @@ export class AppComponent {
 
   searchByCityName() {
     if (this.inputCityName === '') {
-      this.messageService.add({severity:'error', summary:'Error', detail:'City name is required'})
+      this.messageService.add({severity:'error', summary:'Error', detail:'City name is required!'})
+      return;
+    } else if (this.inputCityName.length < 3) {
+      this.messageService.add({severity:'error', summary:'Error', detail:'Required minimum for search is 3 characters!'})
       return;
     }
     this._appService.getCitiesByCityName(this.inputCityName).subscribe((data: any) => {
-      console.log(data);
-      this.foundCities = data;
+      if (Array.isArray(data) && data.length > 0) {
+        this.messageService.add({severity:'success', summary:'Success', detail:'Successfully retrieved city data!'})
+        this.foundCities = data;
+      }
     });
   }
 

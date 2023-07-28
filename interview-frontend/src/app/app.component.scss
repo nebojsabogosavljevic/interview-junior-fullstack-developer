@@ -1,6 +1,6 @@
 .search-field{
     padding: 10px 15px;
-    min-width: 55%;
+    min-width: 75%;
     font-size: 1rem;
     line-height: 1.5em;
     color: #373D41;
@@ -48,7 +48,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-left: 160px;
   }
   
   .card {
@@ -62,6 +61,7 @@
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    padding: 10px;
   }
   
   .city-icon {
@@ -71,7 +71,7 @@
   }
   .city-icon img {
     width: 40px;
-    height: 20px;
+    height: 40px;
     margin-left: 40%;
   }
   

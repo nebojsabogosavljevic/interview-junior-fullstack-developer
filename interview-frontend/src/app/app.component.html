@@ -3,7 +3,7 @@
     <form class="search-form">
       <div class="input-group">
         <div class="input-group2">
-          <label><input type="search" class="search-field" placeholder="Find your perfect domain name" name="cityNameInput" [(ngModel)]="inputCityName"/>
+          <label><input type="search" class="search-field" placeholder="Search for City by its name (enter at least 3 characters)" name="cityNameInput" [(ngModel)]="inputCityName"/>
           </label><input type="submit" class="rstore-domain-search-button search-submit btn btn-primary" value="Search" (click)="searchByCityName()" />
         </div>
       </div>
@@ -19,7 +19,5 @@
       </div>
     </div>
   </div>
-  <div class="card">
-    <p-toast></p-toast>
-  </div>
+  <p-toast></p-toast>
 </div>
